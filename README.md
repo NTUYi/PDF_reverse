@@ -27,15 +27,21 @@ Options:
 
 
 - To reverse the page order of a single PDF file:
-`python main.py --output-folder /path/to/output/folder /path/to/input/file.pdf`
+```
+python main.py --output-folder /path/to/output/folder /path/to/input/file.pdf
+```
 
 
 - To reverse the page order of all PDF files in a folder:
-`python main.py --output-folder /path/to/output/folder /path/to/input/folder`
+```
+python main.py --output-folder /path/to/output/folder /path/to/input/folder
+```
 
 
 ## Tests
 
 To run the tests, run the following command:
 
-`pytest -s test_pdf_reverser.py`
+```
+pytest -s test_pdf_reverser.py
+```
