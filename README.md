@@ -7,7 +7,7 @@ PDF Reverser is a simple command-line utility that reverses the page order of PD
 1. Install Python 3.6 or higher.
 2. Clone the repository:
 ```
-git clone https://github.com/your-username/pdf-reverser.git
+git clone git@github.com:NTUYi/PDF_reverser.git
 ```
 3. Install the required packages:
 ```
