@@ -25,6 +25,14 @@ Options:
 --output-folder TEXT Output folder path (optional)
 --help Show this message and exit.
 
+- reverse the page order of a single PDF file or all PDF files in the specified folder
+
+```
+python main.py --output-folder /path/to/input/file.pdf
+# or 
+python main.py --output-folder /path/to/input/folder/
+```
+
 
 - To reverse the page order of a single PDF file:
 ```
