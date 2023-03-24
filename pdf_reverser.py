@@ -29,7 +29,7 @@ def reverse_pdf_page_order(input_pdf: str, output_pdf: str, task_id: int, progre
 
     typer.echo(f"Reversed PDF page order for {input_pdf}. Output saved to {output_pdf}")
 
-def update_main_progress(future_result, progress):
+def update_main_progress(main_task_id, progress):
     progress.update(main_task_id, advance=1)
 
 @app.command()
@@ -74,7 +74,7 @@ def main(input_path: str = typer.Argument(..., help="Input PDF file or folder pa
             futures = []
             for task_args in tasks:
                 future = executor.submit(reverse_pdf_page_order, *task_args, progress=progress)
-                future.add_done_callback(lambda future_result: update_main_progress(future_result, progress=progress))
+                future.add_done_callback(lambda _: update_main_progress(main_task_id, progress=progress))
                 futures.append(future)
 
             for future in futures:
